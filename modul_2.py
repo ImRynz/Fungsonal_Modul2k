@@ -8,12 +8,14 @@ expenses = [
 def add_expense(expenses, date, description, amount):
     new_expense = {'tanggal': date, 'deskripsi': description, 'jumlah': amount}
     return expenses + [new_expense]
+    
 # TODO 2 Buatlah fungsi calculate_total_expenses disini
 calculate_total_expenses = lambda expenses: sum(expense['jumlah'] for expense in expenses)
 
 # TODO 3 Buatlah fungsi get_expenses_by_date disini
 def get_expenses_by_date(expenses, date):
     return [expense for expense in expenses if expense['tanggal'] == date]
+    
 # TODO 4 Buatlah fungsi generate_expenses_report disini
 def generate_expenses_report(expenses):
     for expense in expenses:
